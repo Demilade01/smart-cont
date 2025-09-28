@@ -7,7 +7,8 @@
     "compile": "hardhat compile",
     "test": "hardhat test",
     "deploy": "hardhat run scripts/deploy.ts --network localhost",
-    "deploy:base": "hardhat run scripts/deploy.ts --network base",
+    "deploy:base-sepolia": "hardhat run scripts/deploy-base-sepolia.ts --network baseSepolia",
+    "deploy:base-mainnet": "hardhat run scripts/deploy-base-mainnet.ts --network base",
     "dev": "concurrently \"hardhat node\" \"npm run start\"",
     "start": "cd frontend && npm start",
     "build": "cd frontend && npm run build"

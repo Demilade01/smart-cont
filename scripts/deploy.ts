@@ -1,9 +1,9 @@
-const { ethers } = require("hardhat");
+const { ethers: localEthers } = require("hardhat");
 
-async function main() {
+async function deployLocal() {
   console.log("Deploying SimpleStorage contract...");
 
-  const SimpleStorage = await ethers.getContractFactory("SimpleStorage");
+  const SimpleStorage = await localEthers.getContractFactory("SimpleStorage");
   const simpleStorage = await SimpleStorage.deploy();
 
   await simpleStorage.waitForDeployment();
@@ -29,7 +29,7 @@ async function main() {
   console.log("Contract info saved to frontend/src/contract-info.json");
 }
 
-main()
+deployLocal()
   .then(() => process.exit(0))
   .catch((error) => {
     console.error(error);
