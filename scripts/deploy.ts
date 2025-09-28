@@ -1,4 +1,4 @@
-import { ethers } from "hardhat";
+const { ethers } = require("hardhat");
 
 async function main() {
   console.log("Deploying SimpleStorage contract...");
@@ -17,7 +17,7 @@ async function main() {
   const fs = require('fs');
   const contractInfo = {
     address: address,
-    network: hre.network.name,
+    network: "localhost",
     deployedAt: new Date().toISOString()
   };
 
@@ -35,4 +35,3 @@ main()
     console.error(error);
     process.exit(1);
   });
-
