@@ -1,7 +1,7 @@
 {
-  "name": "smart-contract-app",
+  "name": "synd-memecoin",
   "version": "1.0.0",
-  "description": "A simple smart contract development environment",
+  "description": "SYND Memecoin - A fun, community-driven memecoin built on Base",
   "main": "index.js",
   "scripts": {
     "compile": "hardhat compile",
@@ -9,19 +9,40 @@
     "deploy": "hardhat run scripts/deploy.ts --network localhost",
     "deploy:base-sepolia": "hardhat run scripts/deploy-base-sepolia.ts --network baseSepolia",
     "deploy:base-mainnet": "hardhat run scripts/deploy-base-mainnet.ts --network base",
+    "deploy:synd": "hardhat run scripts/deploy-synd.ts --network localhost",
+    "deploy:synd-sepolia": "hardhat run scripts/deploy-synd-base-sepolia.ts --network baseSepolia",
+    "deploy:synd-mainnet": "hardhat run scripts/deploy-synd-base-mainnet.ts --network base",
     "dev": "concurrently \"hardhat node\" \"npm run start\"",
     "start": "cd frontend && npm start",
-    "build": "cd frontend && npm run build"
+    "build": "cd frontend && npm run build",
+    "install:frontend": "cd frontend && npm install",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write .",
+    "type-check": "tsc --noEmit"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
     "@types/node": "^20.19.17",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "chai": "^4.3.0",
     "concurrently": "^8.0.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.0.0",
     "hardhat": "^2.19.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "mocha": "^10.0.0",
+    "prettier": "^3.0.0",
     "typescript": "^5.0.0"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.0",
+    "@openzeppelin/contracts-upgradeable": "^5.0.0",
     "ethers": "^6.0.0"
   }
 }
