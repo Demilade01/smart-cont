@@ -1,0 +1,27 @@
+{
+  "name": "smart-contract-app",
+  "version": "1.0.0",
+  "description": "A simple smart contract development environment",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.ts --network localhost",
+    "deploy:base": "hardhat run scripts/deploy.ts --network base",
+    "dev": "concurrently \"hardhat node\" \"npm run start\"",
+    "start": "cd frontend && npm start",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@types/node": "^20.19.17",
+    "concurrently": "^8.0.0",
+    "hardhat": "^2.19.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "ethers": "^6.0.0"
+  }
+}
+

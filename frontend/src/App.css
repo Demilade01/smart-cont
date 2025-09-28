@@ -1,0 +1,117 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.App-header {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.connect-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.connect-btn:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.connected {
+  background: rgba(255,255,255,0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.contract-info {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.contract-info h3 {
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.contract-info p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.interaction-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.interaction-section h4 {
+  color: #87CEEB;
+  margin-bottom: 1rem;
+}
+
+.value-input {
+  width: 200px;
+  padding: 0.8rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.9);
+  color: #333;
+}
+
+.set-btn, .get-btn {
+  background: #FF6B6B;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.set-btn:hover, .get-btn:hover {
+  background: #FF5252;
+  transform: translateY(-1px);
+}
+
+.get-btn {
+  background: #4ECDC4;
+}
+
+.get-btn:hover {
+  background: #45B7B8;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
